@@ -10,8 +10,9 @@ const DEBOUNCE_DELAY = 300;
 //restcountries.com/v2/{service}?fields={field},{field},{field}
 //restcountries.com/v2/all?fields=name,capital,currencies
 // =======================================
+const name = 'canada';
 fetch(
-  'https://restcountries.com/v3.1/name/canada?fields=name,capital,population,languages,flags'
+  `https://restcountries.com/v3.1/name/${name}/?fields=name,capital,population,languages,flags`
 )
   .then(response => {
     return response.json();
