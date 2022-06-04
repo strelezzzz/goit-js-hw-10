@@ -1,5 +1,8 @@
 export { markupCoutnryInfo, markupCoutnryList, markupCleaner };
 // ===========================
+countryList = document.querySelector('.country-list');
+countryInfo = document.querySelector('.country-info');
+// ===========================
 function markupCoutnryInfo(obj) {
   obj.map(({ name, capital, population, languages, flags }) => {
     const markup = `<div class="country-info">

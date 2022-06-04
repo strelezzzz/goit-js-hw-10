@@ -10,8 +10,7 @@ import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const DEBOUNCE_DELAY = 300;
 // ==============================================================
-countryList = document.querySelector('.country-list');
-countryInfo = document.querySelector('.country-info');
+
 inputField = document.querySelector('#search-box');
 inputField.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 // =================================================================
