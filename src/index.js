@@ -4,6 +4,7 @@ import {
   markupCoutnryInfo,
   markupCoutnryList,
   markupCleaner,
+  refs,
 } from './js/markup';
 // import countryCardsTpl from './countryCards.hbs';
 import debounce from 'lodash.debounce';
@@ -11,8 +12,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const DEBOUNCE_DELAY = 300;
 // ==============================================================
 
-inputField = document.querySelector('#search-box');
-inputField.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
+refs.inputField.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 // =================================================================
 function onInput(e) {
   const input = e.target.value.trim();

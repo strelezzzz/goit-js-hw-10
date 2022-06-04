@@ -1,7 +1,10 @@
 export { markupCoutnryInfo, markupCoutnryList, markupCleaner };
 // ===========================
-countryList = document.querySelector('.country-list');
-countryInfo = document.querySelector('.country-info');
+export const refs = {
+  countryList: document.querySelector('.country-list'),
+  countryInfo: document.querySelector('.country-info'),
+  inputField: document.querySelector('#search-box'),
+};
 // ===========================
 function markupCoutnryInfo(obj) {
   obj.map(({ name, capital, population, languages, flags }) => {
@@ -19,7 +22,7 @@ function markupCoutnryInfo(obj) {
         </div>
     </div>`;
     console.log(markup);
-    countryInfo.innerHTML = markup;
+    refs.countryInfo.innerHTML = markup;
   });
 }
 // =================================
@@ -34,10 +37,10 @@ function markupCoutnryList(obj) {
     )
     .join('');
   console.log(markup);
-  countryInfo.innerHTML = markup;
+  refs.countryInfo.innerHTML = markup;
 }
 // =================================
 function markupCleaner() {
-  countryInfo.innerHTML = '';
-  countryList.innerHTML = '';
+  refs.countryInfo.innerHTML = '';
+  refs.countryList.innerHTML = '';
 }
