@@ -18,3 +18,22 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.card-name{
+  display: inline;
+  padding-left: 10px;
+}
+
+.card-flag {
+  display: flex;
+  align-items: center;
+}
+.values{
+  font-weight: bold;
+}
+
+.country-list{
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
